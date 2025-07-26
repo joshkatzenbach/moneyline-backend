@@ -4,7 +4,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/ping")
 def read_root():
     return {"message": "Moneyline backend is live!"}
 
@@ -13,3 +13,4 @@ def read_root():
 @app.get("/test")
 def test_endpoint():
     return {"message": "This is a test endpoint!"}
+
