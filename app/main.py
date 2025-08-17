@@ -1,7 +1,7 @@
 # main.py
 
 from fastapi import FastAPI
-import app.routes.AuthController as AuthController  
+import routes.AuthController as AuthController  
 
 
 
@@ -16,8 +16,6 @@ def read_root():
 @app.get("/ping")
 def read_root():
     return {"message": "Moneyline backend is live!"}
-
-
 
 @app.get("/test")
 def test_endpoint():
