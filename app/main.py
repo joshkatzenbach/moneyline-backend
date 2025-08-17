@@ -2,6 +2,18 @@
 
 from fastapi import FastAPI
 from app.routes import AuthController  
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# Allow ALL origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # This allows any origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 
