@@ -18,11 +18,11 @@ app.add_middleware(
 
 app.include_router(AuthController.app, prefix="/auth", tags=["auth"])
 
-@app.head("/ping")
+@app.get("/ping")
 def read_root():
     return {"message": "Moneyline backend is live!"}
 
 @app.get("/test")
 def test_endpoint():
-    return {"message": "This is in prod"}
+    return {"message": "This is prod"}
 
