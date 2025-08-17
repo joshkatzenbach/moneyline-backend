@@ -1,7 +1,7 @@
 # main.py
 
 from fastapi import FastAPI
-import routes.AuthController as AuthController  
+from app.routes import AuthController  
 
 
 
