@@ -10,14 +10,11 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # This allows any origin
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
-
-app = FastAPI()
 
 app.include_router(AuthController.app, prefix="/auth", tags=["auth"])
 
@@ -31,5 +28,5 @@ def read_root():
 
 @app.get("/test")
 def test_endpoint():
-    return {"message": "This is a test endpoint!"}
+    return {"message": "This is LOCAL!"}
 
