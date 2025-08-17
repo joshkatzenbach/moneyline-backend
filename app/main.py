@@ -22,11 +22,7 @@ app.include_router(AuthController.app, prefix="/auth", tags=["auth"])
 def read_root():
     return {"message": "Moneyline backend is live!"}
 
-@app.get("/ping")
-def read_root():
-    return {"message": "Moneyline backend is live!"}
-
 @app.get("/test")
 def test_endpoint():
-    return {"message": "This is LOCAL!"}
+    return {"message": "This is in prod"}
 
